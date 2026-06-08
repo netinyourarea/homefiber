@@ -1,5 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Phone, Wifi, Tv, ShieldCheck, ArrowRight, Quote, MapPin, Settings2, Router as RouterIcon, LifeBuoy, BookOpen, Star } from "lucide-react";
+import {
+  Phone,
+  Wifi,
+  Tv,
+  ShieldCheck,
+  ArrowRight,
+  Quote,
+  MapPin,
+  Settings2,
+  Router as RouterIcon,
+  LifeBuoy,
+  BookOpen,
+  Star,
+} from "lucide-react";
 import { useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
@@ -24,9 +37,20 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Home Fiber Connection — Independent Internet & Cable Service Assistance" },
-      { name: "description", content: "Home Fiber Connection is an independent third-party assistance startup offering guidance and informational support for internet, broadband, Wi-Fi and cable TV concerns. Not an ISP." },
-      { property: "og:title", content: "Home Fiber Connection — Independent Internet & Cable Assistance" },
-      { property: "og:description", content: "Independent guidance and support for internet, Wi-Fi and cable TV — not affiliated with any provider." },
+      {
+        name: "description",
+        content:
+          "Home Fiber Connection is an independent third-party assistance startup offering guidance and informational support for internet, broadband, Wi-Fi and cable TV concerns. Not an ISP.",
+      },
+      {
+        property: "og:title",
+        content: "Home Fiber Connection — Independent Internet & Cable Assistance",
+      },
+      {
+        property: "og:description",
+        content:
+          "Independent guidance and support for internet, Wi-Fi and cable TV — not affiliated with any provider.",
+      },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -35,27 +59,86 @@ export const Route = createFileRoute("/")({
 });
 
 const helpTopics = [
-  { icon: Wifi, title: "Wi-Fi & broadband guidance", img: fiber, tag: "Connectivity", span: "lg:col-span-2 lg:row-span-2" },
+  {
+    icon: Wifi,
+    title: "Wi-Fi & broadband guidance",
+    img: fiber,
+    tag: "Connectivity",
+    span: "lg:col-span-2 lg:row-span-2",
+  },
   { icon: Tv, title: "Cable TV navigation help", img: cableTv, tag: "Cable", span: "" },
-  { icon: RouterIcon, title: "Router & equipment guidance", img: routerImg, tag: "Equipment", span: "" },
-  { icon: Settings2, title: "Setup walkthroughs", img: smartHome, tag: "Setup", span: "lg:col-span-2" },
+  {
+    icon: RouterIcon,
+    title: "Router & equipment guidance",
+    img: routerImg,
+    tag: "Equipment",
+    span: "",
+  },
+  {
+    icon: Settings2,
+    title: "Setup walkthroughs",
+    img: smartHome,
+    tag: "Setup",
+    span: "lg:col-span-2",
+  },
   { icon: LifeBuoy, title: "Common issue assistance", img: homeOffice, tag: "Support", span: "" },
   { icon: BookOpen, title: "Service option explainers", img: gaming, tag: "Education", span: "" },
 ];
 
 const reasons = [
-  { title: "Independent and impartial", text: "We are a brand-new third-party startup with no provider ties — our only role is to help you understand your options.", img: heroLiving },
-  { title: "Clear, plain-language guidance", text: "We translate confusing provider terminology into simple steps so you can make informed decisions about your home connection.", img: business },
-  { title: "Educational, not transactional", text: "We do not sell plans, activations, or subscriptions. We focus on informational support and general guidance.", img: heroStreaming },
-  { title: "Real humans, simple conversation", text: "Speak with a third-party assistance specialist — no scripts, no pressure, no passwords requested.", img: support },
+  {
+    title: "Independent and impartial",
+    text: "We are a brand-new third-party startup with no provider ties — our only role is to help you understand your options.",
+    img: heroLiving,
+  },
+  {
+    title: "Clear, plain-language guidance",
+    text: "We translate confusing provider terminology into simple steps so you can make informed decisions about your home connection.",
+    img: business,
+  },
+  {
+    title: "Educational, not transactional",
+    text: "We do not sell plans, activations, or subscriptions. We focus on informational support and general guidance.",
+    img: heroStreaming,
+  },
+  {
+    title: "Real humans, simple conversation",
+    text: "Speak with a third-party assistance specialist — no scripts, no pressure, no passwords requested.",
+    img: support,
+  },
 ];
 
 const testimonials = [
-  { name: "Marcus V.", role: "Customer in NY", quote: "They calmly walked me through what to ask my provider. No pressure, no upselling — exactly the kind of independent help I needed." },
-  { name: "Priya R.", role: "Customer in TX", quote: "I had no idea what half of my bill meant. The advisor explained everything in plain language and didn't try to sell me anything." },
-  { name: "The Okafor Family", role: "Customers in GA", quote: "They were upfront that they are not our provider — that honesty is exactly why we trusted the guidance we received." },
-  { name: "Jordan P.", role: "Customer in CO", quote: "Got general guidance on a Wi-Fi issue at home in one short call. Very transparent about what they could and could not do." },
-  { name: "Sienna B.", role: "Customer in WA", quote: "Refreshing to talk to a real, independent advisor instead of a call tree. They never asked for any passwords." },
+  {
+    name: "Marcus V.",
+    role: "Customer in NY",
+    quote:
+      "They calmly walked me through what to ask my provider. No pressure, no upselling — exactly the kind of independent help I needed.",
+  },
+  {
+    name: "Priya R.",
+    role: "Customer in TX",
+    quote:
+      "I had no idea what half of my bill meant. The advisor explained everything in plain language and didn't try to sell me anything.",
+  },
+  {
+    name: "The Okafor Family",
+    role: "Customers in GA",
+    quote:
+      "They were upfront that they are not our provider — that honesty is exactly why we trusted the guidance we received.",
+  },
+  {
+    name: "Jordan P.",
+    role: "Customer in CO",
+    quote:
+      "Got general guidance on a Wi-Fi issue at home in one short call. Very transparent about what they could and could not do.",
+  },
+  {
+    name: "Sienna B.",
+    role: "Customer in WA",
+    quote:
+      "Refreshing to talk to a real, independent advisor instead of a call tree. They never asked for any passwords.",
+  },
 ];
 
 function HomePage() {
@@ -104,7 +187,6 @@ function Hero() {
       {/* ── main split grid ── */}
       <div className="container mx-auto px-6 lg:px-10 pt-32 pb-10 lg:pt-40 lg:pb-16">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-6 items-center">
-
           {/* LEFT — editorial copy ── */}
           <div className="lg:col-span-6 xl:col-span-7 flex flex-col">
             {/* eyebrow */}
@@ -148,7 +230,8 @@ function Hero() {
             {/* subtext */}
             <Reveal delay={160}>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-                General guidance and informational support for internet, broadband, Wi-Fi and cable TV — from an independent startup with no provider ties.
+                General guidance and informational support for internet, broadband, Wi-Fi and cable
+                TV — from an independent startup with no provider ties.
               </p>
             </Reveal>
 
@@ -163,7 +246,9 @@ function Hero() {
                     <Phone className="w-4 h-4" />
                   </span>
                   <span>
-                    <span className="block text-[10px] uppercase tracking-widest opacity-75 leading-none mb-0.5">Call now</span>
+                    <span className="block text-[10px] uppercase tracking-widest opacity-75 leading-none mb-0.5">
+                      Call now
+                    </span>
                     (888) 478-4101
                   </span>
                 </a>
@@ -191,7 +276,9 @@ function Hero() {
                     <div className="font-display text-xl sm:text-2xl font-semibold">
                       <Counter to={s.n} suffix={s.s} />
                     </div>
-                    <div className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{s.l}</div>
+                    <div className="text-[10px] text-muted-foreground mt-0.5 leading-tight">
+                      {s.l}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -231,22 +318,27 @@ function Hero() {
               <div className="absolute top-6 left-0 glass rounded-2xl px-4 py-3 max-w-[190px] border border-primary/20">
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-widest text-primary font-semibold">Advisor on line</span>
+                  <span className="text-[10px] uppercase tracking-widest text-primary font-semibold">
+                    Advisor on line
+                  </span>
                 </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">Independent · third-party only · no provider ties</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Independent · third-party only · no provider ties
+                </p>
               </div>
             </Reveal>
 
             {/* Floating stats chip — mid-right */}
             <Reveal delay={300} className="absolute inset-0">
               <div className="absolute bottom-[28%] right-0 glass rounded-2xl p-4 border border-amber/20">
-                <div className="text-[10px] uppercase tracking-widest text-amber font-semibold mb-1">Est. 2026</div>
+                <div className="text-[10px] uppercase tracking-widest text-amber font-semibold mb-1">
+                  Est. 2026
+                </div>
                 <div className="font-display text-2xl font-semibold">U.S. Wide</div>
                 <div className="text-[11px] text-muted-foreground mt-0.5">Independent startup</div>
               </div>
             </Reveal>
           </div>
-
         </div>
       </div>
 
@@ -254,7 +346,10 @@ function Hero() {
       <div className="relative mt-2 border-y border-border/30 bg-onyx/50 py-3 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap gap-0">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-3 px-6 text-xs text-muted-foreground uppercase tracking-widest">
+            <span
+              key={i}
+              className="inline-flex items-center gap-3 px-6 text-xs text-muted-foreground uppercase tracking-widest"
+            >
               <span className="w-1 h-1 rounded-full bg-primary flex-none" />
               {item}
             </span>
@@ -272,7 +367,10 @@ function DisclosureStrip() {
       <div className="container mx-auto px-6 lg:px-10 py-5 flex items-start gap-3 text-xs md:text-sm text-muted-foreground leading-relaxed">
         <ShieldCheck className="w-4 h-4 mt-0.5 text-amber flex-none" />
         <p>
-          <strong className="text-foreground">Home Fiber Connection</strong> is an independent third-party service assistance startup, launched in 2026, and is not affiliated with, endorsed by, authorized by, or sponsored by any cable, internet, broadband, or streaming service provider.
+          <strong className="text-foreground">Home Fiber Connection</strong> is an independent
+          third-party service assistance startup, launched in 2026, and is not affiliated with,
+          endorsed by, authorized by, or sponsored by any cable, internet, broadband, or streaming
+          service provider.
         </p>
       </div>
     </section>
@@ -293,10 +391,12 @@ function WhatWeDo() {
         <Reveal className="lg:col-span-5">
           <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">What we do</p>
           <h2 className="font-display text-3xl md:text-5xl mt-3 tracking-tight font-semibold text-balance">
-            How Home Fiber Connection <span className="font-serif-italic text-amber">helps you</span>.
+            How Home Fiber Connection{" "}
+            <span className="font-serif-italic text-amber">helps you</span>.
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed">
-            Our role is limited to independent guidance and assistance. We help users navigate everyday connectivity questions in plain language.
+            Our role is limited to independent guidance and assistance. We help users navigate
+            everyday connectivity questions in plain language.
           </p>
         </Reveal>
         <Reveal className="lg:col-span-7" delay={120}>
@@ -330,12 +430,15 @@ function WhatWeDontDo() {
       <div className="container mx-auto px-6 lg:px-10">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">What we do not do</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">
+              What we do not do
+            </p>
             <h2 className="font-display text-3xl md:text-5xl mt-3 tracking-tight font-semibold text-balance">
               Clarity, <span className="font-serif-italic text-amber">on purpose</span>.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              To avoid any confusion, please note the boundaries of our independent assistance service:
+              To avoid any confusion, please note the boundaries of our independent assistance
+              service:
             </p>
           </div>
         </Reveal>
@@ -343,14 +446,17 @@ function WhatWeDontDo() {
           {items.map((t, i) => (
             <Reveal key={t} delay={i * 60}>
               <div className="rounded-2xl border border-border/60 bg-card/60 p-5 h-full">
-                <div className="text-amber text-xs font-semibold uppercase tracking-widest">0{i + 1}</div>
+                <div className="text-amber text-xs font-semibold uppercase tracking-widest">
+                  0{i + 1}
+                </div>
                 <p className="mt-3 text-sm text-foreground/85 leading-relaxed">{t}</p>
               </div>
             </Reveal>
           ))}
         </div>
         <p className="mt-8 text-xs text-muted-foreground max-w-3xl">
-          All mentions of providers, if any, are strictly for informational purposes only. Brand names referenced on this site are trademarks of their respective owners.
+          All mentions of providers, if any, are strictly for informational purposes only. Brand
+          names referenced on this site are trademarks of their respective owners.
         </p>
       </div>
     </section>
@@ -364,14 +470,18 @@ function HelpTopics() {
       <div className="container mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-6 items-end mb-12">
           <Reveal className="lg:col-span-7">
-            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">Help topics</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">
+              Help topics
+            </p>
             <h2 className="font-display text-4xl md:text-6xl mt-3 tracking-tight font-semibold text-balance">
-              Where independent <span className="font-serif-italic text-amber">guidance</span> helps most.
+              Where independent <span className="font-serif-italic text-amber">guidance</span> helps
+              most.
             </h2>
           </Reveal>
           <Reveal className="lg:col-span-5" delay={120}>
             <p className="text-muted-foreground leading-relaxed">
-              A range of everyday topics our third-party assistance specialists can walk you through — informational support, not service activation.
+              A range of everyday topics our third-party assistance specialists can walk you through
+              — informational support, not service activation.
             </p>
           </Reveal>
         </div>
@@ -379,14 +489,24 @@ function HelpTopics() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-[240px] gap-4">
           {helpTopics.map((b, i) => (
             <Reveal key={b.title} delay={i * 60} className={b.span}>
-              <Link to="/services" className="group relative h-full block rounded-2xl overflow-hidden bg-card border border-border/40 hover-lift">
-                <img src={b.img} alt={b.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-45 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700" />
+              <Link
+                to="/services"
+                className="group relative h-full block rounded-2xl overflow-hidden bg-card border border-border/40 hover-lift"
+              >
+                <img
+                  src={b.img}
+                  alt={b.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover opacity-45 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                 <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full glass text-[10px] uppercase tracking-widest text-amber font-semibold">
                   <b.icon className="w-3 h-3" /> {b.tag}
                 </div>
                 <div className="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between">
-                  <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">{b.title}</h3>
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">
+                    {b.title}
+                  </h3>
                   <ArrowRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </div>
               </Link>
@@ -405,25 +525,39 @@ function Coverage() {
     <section id="coverage" className="py-24 relative">
       <div className="container mx-auto px-6 lg:px-10">
         <div className="relative rounded-3xl overflow-hidden border border-border/40">
-          <img src={neighborhood} alt="Neighborhoods using home internet" loading="lazy" width={1600} height={900} className="w-full h-[560px] md:h-[640px] object-cover" />
+          <img
+            src={neighborhood}
+            alt="Neighborhoods using home internet"
+            loading="lazy"
+            width={1600}
+            height={900}
+            className="w-full h-[560px] md:h-[640px] object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-6 lg:px-10">
               <Reveal>
-                <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">Where we help</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">
+                  Where we help
+                </p>
                 <h2 className="font-display text-4xl md:text-6xl mt-3 max-w-xl tracking-tight font-semibold text-balance">
-                  Available to U.S. households, <span className="font-serif-italic text-amber">coast to coast</span>.
+                  Available to U.S. households,{" "}
+                  <span className="font-serif-italic text-amber">coast to coast</span>.
                 </h2>
                 <p className="mt-5 max-w-md text-muted-foreground leading-relaxed">
-                  Share your ZIP code and we'll point you to general assistance topics relevant in your area. This is informational only — we do not check provider availability or sell service.
+                  Share your ZIP code and we'll point you to general assistance topics relevant in
+                  your area. This is informational only — we do not check provider availability or
+                  sell service.
                 </p>
 
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    alert(`We'll prepare general guidance for ${zip}. An advisor will follow up if you call us.`);
+                    alert(
+                      `We'll prepare general guidance for ${zip}. An advisor will follow up if you call us.`,
+                    );
                   }}
                   className="mt-8 flex items-stretch gap-2 max-w-md glass rounded-full p-1.5"
                 >
@@ -458,9 +592,12 @@ function WhySwitch() {
       <div className="container mx-auto px-6 lg:px-10">
         <Reveal>
           <div className="max-w-2xl mb-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">Why people choose us</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">
+              Why people choose us
+            </p>
             <h2 className="font-display text-4xl md:text-6xl mt-3 tracking-tight font-semibold text-balance">
-              Built on <span className="font-serif-italic text-amber">independence</span> and transparency.
+              Built on <span className="font-serif-italic text-amber">independence</span> and
+              transparency.
             </h2>
           </div>
         </Reveal>
@@ -468,17 +605,33 @@ function WhySwitch() {
         <div className="space-y-20">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={i * 80}>
-              <article className={`grid lg:grid-cols-12 gap-10 items-center ${i % 2 ? "lg:[direction:rtl]" : ""}`}>
+              <article
+                className={`grid lg:grid-cols-12 gap-10 items-center ${i % 2 ? "lg:[direction:rtl]" : ""}`}
+              >
                 <div className="lg:col-span-7 [direction:ltr]">
                   <div className="relative rounded-3xl overflow-hidden ring-glow">
-                    <img src={r.img} alt={r.title} loading="lazy" width={1280} height={896} className="w-full aspect-[16/10] object-cover" />
-                    <div className="absolute top-5 left-5 px-3 py-1.5 rounded-full glass text-xs font-semibold tracking-wider text-amber">0{i + 1}</div>
+                    <img
+                      src={r.img}
+                      alt={r.title}
+                      loading="lazy"
+                      width={1280}
+                      height={896}
+                      className="w-full aspect-[16/10] object-cover"
+                    />
+                    <div className="absolute top-5 left-5 px-3 py-1.5 rounded-full glass text-xs font-semibold tracking-wider text-amber">
+                      0{i + 1}
+                    </div>
                   </div>
                 </div>
                 <div className="lg:col-span-5 [direction:ltr]">
-                  <h3 className="font-display text-3xl md:text-4xl font-semibold tracking-tight">{r.title}</h3>
+                  <h3 className="font-display text-3xl md:text-4xl font-semibold tracking-tight">
+                    {r.title}
+                  </h3>
                   <p className="mt-4 text-muted-foreground leading-relaxed">{r.text}</p>
-                  <Link to="/about" className="mt-6 inline-flex items-center gap-2 text-sm text-primary font-semibold hover:gap-3 transition-all">
+                  <Link
+                    to="/about"
+                    className="mt-6 inline-flex items-center gap-2 text-sm text-primary font-semibold hover:gap-3 transition-all"
+                  >
                     Learn more <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -508,15 +661,15 @@ function Testimonials() {
       </div>
 
       <div className="relative container mx-auto px-6 lg:px-10">
-
         {/* header row — left headline + right count badge */}
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">In their words</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">
+                In their words
+              </p>
               <h2 className="font-display text-4xl md:text-6xl mt-3 tracking-tight font-semibold text-balance">
-                Real people,{" "}
-                <span className="font-serif-italic text-amber">real guidance</span>.
+                Real people, <span className="font-serif-italic text-amber">real guidance</span>.
               </h2>
             </div>
             <div className="glass rounded-2xl px-6 py-4 text-center hidden md:block">
@@ -526,7 +679,9 @@ function Testimonials() {
                   <Star key={j} className="w-3 h-3 fill-amber text-amber" />
                 ))}
               </div>
-              <div className="text-[10px] text-muted-foreground mt-1 uppercase tracking-widest">Avg. rating</div>
+              <div className="text-[10px] text-muted-foreground mt-1 uppercase tracking-widest">
+                Avg. rating
+              </div>
             </div>
           </div>
         </Reveal>
@@ -561,7 +716,8 @@ function Testimonials() {
                   <Quote className="w-6 h-6 text-primary" />
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                  Get independent guidance from a real third-party advisor — no scripts, no pressure.
+                  Get independent guidance from a real third-party advisor — no scripts, no
+                  pressure.
                 </p>
                 <a
                   href="tel:8884784101"
@@ -578,7 +734,7 @@ function Testimonials() {
   );
 }
 
-function TestimonialCard({ t, accent = false }: { t: typeof testimonials[0]; accent?: boolean }) {
+function TestimonialCard({ t, accent = false }: { t: (typeof testimonials)[0]; accent?: boolean }) {
   return (
     <figure
       className={`relative rounded-2xl p-7 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 ${
@@ -625,26 +781,44 @@ function FinalCTA() {
     <section className="py-24">
       <div className="container mx-auto px-6 lg:px-10">
         <div className="relative rounded-3xl overflow-hidden border border-border/40">
-          <img src={supportCall} alt="Independent advisor workspace ready to assist" loading="lazy" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover" />
+          <img
+            src={supportCall}
+            alt="Independent advisor workspace ready to assist"
+            loading="lazy"
+            width={1920}
+            height={1080}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/40" />
           <div className="relative p-10 md:p-20 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">Independent assistance · ready to help</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-amber font-semibold">
+              Independent assistance · ready to help
+            </p>
             <h2 className="font-display text-4xl md:text-6xl mt-3 tracking-tight font-semibold text-balance">
               Get <span className="font-serif-italic text-amber">independent guidance</span> today.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              One quick call. A real third-party advisor. Plain-language guidance — no scripts, no sales pressure, and no provider account passwords requested.
+              One quick call. A real third-party advisor. Plain-language guidance — no scripts, no
+              sales pressure, and no provider account passwords requested.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="tel:8884784101" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-glow-red transition-all">
+              <a
+                href="tel:8884784101"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-glow-red transition-all"
+              >
                 <Phone className="w-4 h-4" /> Call (888) 478-4101
               </a>
-              <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white/10 transition-colors">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white/10 transition-colors"
+              >
                 Request Help <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
             <p className="mt-5 text-xs text-muted-foreground max-w-md">
-              Home Fiber Connection is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider.
+              Home Fiber Connection is an independent third-party service assistance provider. We
+              are not affiliated with, authorized by, or endorsed by any internet, broadband, or
+              cable TV service provider.
             </p>
           </div>
         </div>

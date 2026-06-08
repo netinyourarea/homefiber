@@ -13,7 +13,9 @@ export function SupportPopup() {
 
   const close = () => {
     setOpen(false);
-    try { sessionStorage.setItem("hfc_support_popup_dismissed", "1"); } catch {}
+    try {
+      sessionStorage.setItem("hfc_support_popup_dismissed", "1");
+    } catch {}
   };
 
   if (!open) return null;
@@ -48,12 +50,16 @@ export function SupportPopup() {
             <Wifi className="w-8 h-8 text-primary-foreground" />
           </div>
 
-          <h2 id="support-popup-title" className="font-display text-3xl md:text-4xl mt-6 tracking-tight font-semibold">
+          <h2
+            id="support-popup-title"
+            className="font-display text-3xl md:text-4xl mt-6 tracking-tight font-semibold"
+          >
             Internet or Cable <span className="font-serif-italic text-amber">Not Working?</span>
           </h2>
 
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Get independent third-party guidance for slow internet, outages, setup confusion or cable concerns.
+            Get independent third-party guidance for slow internet, outages, setup confusion or
+            cable concerns.
           </p>
 
           <a
@@ -68,7 +74,8 @@ export function SupportPopup() {
             Quick assistance &nbsp;•&nbsp; No forms &nbsp;•&nbsp; Talk to a real third-party advisor
           </p>
           <p className="mt-3 text-[10px] text-muted-foreground/70 leading-relaxed">
-            Home Fiber Connection is an independent third-party service. Not affiliated with any provider.
+            Home Fiber Connection is an independent third-party service. Not affiliated with any
+            provider.
           </p>
         </div>
       </div>

@@ -5,7 +5,11 @@ export const Route = createFileRoute("/disclaimer")({
   head: () => ({
     meta: [
       { title: "Disclaimer | Home Fiber Connection" },
-      { name: "description", content: "Home Fiber Connection is an independent third-party service assistance startup, not affiliated with any internet, cable TV or streaming provider." },
+      {
+        name: "description",
+        content:
+          "Home Fiber Connection is an independent third-party service assistance startup, not affiliated with any internet, cable TV or streaming provider.",
+      },
       { property: "og:url", content: "/disclaimer" },
     ],
     links: [{ rel: "canonical", href: "/disclaimer" }],
@@ -24,11 +28,17 @@ function DisclaimerPage() {
 
           <div className="mt-10 space-y-8 text-muted-foreground leading-relaxed">
             <p>
-              <strong className="text-foreground">Home Fiber Connection</strong> is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. Brand names, if mentioned, are used strictly for informational purposes only.
+              <strong className="text-foreground">Home Fiber Connection</strong> is an independent
+              third-party service assistance provider. We are not affiliated with, authorized by, or
+              endorsed by any internet, broadband, or cable TV service provider. Brand names, if
+              mentioned, are used strictly for informational purposes only.
             </p>
 
             <p>
-              All information on this website is provided in good faith for general informational and educational purposes only. We make no representations or warranties of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability or completeness of any information on the site.
+              All information on this website is provided in good faith for general informational
+              and educational purposes only. We make no representations or warranties of any kind,
+              express or implied, regarding the accuracy, adequacy, validity, reliability or
+              completeness of any information on the site.
             </p>
 
             <p>Our role is limited to independent guidance and assistance. We do not:</p>
@@ -40,14 +50,21 @@ function DisclaimerPage() {
             </ul>
 
             <p>
-              All trademarks, logos and brand names mentioned belong to their respective owners. Their use here is strictly for informational reference and does not imply any affiliation or endorsement.
+              All trademarks, logos and brand names mentioned belong to their respective owners.
+              Their use here is strictly for informational reference and does not imply any
+              affiliation or endorsement.
             </p>
 
             <p>
               For questions about this Disclaimer, contact{" "}
-              <a className="text-primary" href="mailto:support@homefiberconnection.com">support@homefiberconnection.com</a>{" "}
+              <a className="text-primary" href="mailto:support@homefiberconnection.com">
+                support@homefiberconnection.com
+              </a>{" "}
               or call{" "}
-              <a className="text-primary" href="tel:8884784101">(888) 478-4101</a>.
+              <a className="text-primary" href="tel:8884784101">
+                (888) 478-4101
+              </a>
+              .
             </p>
           </div>
         </div>

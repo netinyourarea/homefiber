@@ -5,7 +5,11 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy | Home Fiber Connection" },
-      { name: "description", content: "How Home Fiber Connection, an independent third-party assistance startup, collects, uses, and protects your personal information." },
+      {
+        name: "description",
+        content:
+          "How Home Fiber Connection, an independent third-party assistance startup, collects, uses, and protects your personal information.",
+      },
       { property: "og:url", content: "/privacy" },
     ],
     links: [{ rel: "canonical", href: "/privacy" }],
@@ -24,34 +28,51 @@ function PrivacyPage() {
 
           <div className="prose prose-invert mt-10 space-y-8 text-muted-foreground leading-relaxed">
             <Section title="1. About this policy">
-              Home Fiber Connection is an independent third-party service assistance startup. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. This Privacy Policy explains how we handle your information when you use our assistance services.
+              Home Fiber Connection is an independent third-party service assistance startup. We are
+              not affiliated with, authorized by, or endorsed by any internet, broadband, or cable
+              TV service provider. This Privacy Policy explains how we handle your information when
+              you use our assistance services.
             </Section>
             <Section title="2. Information we collect">
-              We collect only information you provide directly to us — for example your name, contact details, ZIP code, and a description of the assistance you are seeking. We never request provider account passwords or other sensitive credentials.
+              We collect only information you provide directly to us — for example your name,
+              contact details, ZIP code, and a description of the assistance you are seeking. We
+              never request provider account passwords or other sensitive credentials.
             </Section>
             <Section title="3. How we use your information">
-              To respond to assistance requests, deliver third-party guidance, process payment of our assistance fee, and improve our service. We do not sell your personal information.
+              To respond to assistance requests, deliver third-party guidance, process payment of
+              our assistance fee, and improve our service. We do not sell your personal information.
             </Section>
             <Section title="4. Information sharing">
-              We share information only with vendors who help us operate (such as payment processors) and as required by law. We do not share your information with any internet, cable, or streaming provider.
+              We share information only with vendors who help us operate (such as payment
+              processors) and as required by law. We do not share your information with any
+              internet, cable, or streaming provider.
             </Section>
             <Section title="5. Data security">
-              The site is served over HTTPS. We use encryption in transit, access controls, and routine reviews to protect your information.
+              The site is served over HTTPS. We use encryption in transit, access controls, and
+              routine reviews to protect your information.
             </Section>
             <Section title="6. Your rights">
-              You may request access, correction, or deletion of your personal data at any time by contacting support@homefiberconnection.com.
+              You may request access, correction, or deletion of your personal data at any time by
+              contacting support@homefiberconnection.com.
             </Section>
             <Section title="7. Cookies & tracking">
-              We use essential cookies to operate the site and optional analytics cookies to improve it. You can manage preferences via your browser.
+              We use essential cookies to operate the site and optional analytics cookies to improve
+              it. You can manage preferences via your browser.
             </Section>
             <Section title="8. Children's privacy">
-              Our services are not directed to children under 13. We do not knowingly collect data from children.
+              Our services are not directed to children under 13. We do not knowingly collect data
+              from children.
             </Section>
             <Section title="9. Contact">
               Questions? Email{" "}
-              <a className="text-primary" href="mailto:support@homefiberconnection.com">support@homefiberconnection.com</a>{" "}
+              <a className="text-primary" href="mailto:support@homefiberconnection.com">
+                support@homefiberconnection.com
+              </a>{" "}
               or call{" "}
-              <a className="text-primary" href="tel:8884784101">(888) 478-4101</a>.
+              <a className="text-primary" href="tel:8884784101">
+                (888) 478-4101
+              </a>
+              .
             </Section>
           </div>
         </div>
