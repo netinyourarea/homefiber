@@ -6,7 +6,10 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
   plugins: [
-    TanStackRouterVite({ routesDirectory: "./src/routes", generatedRouteTree: "./src/routeTree.gen.ts" }),
+    TanStackRouterVite({
+      routesDirectory: "./src/routes",
+      generatedRouteTree: "./src/routeTree.gen.ts",
+    }),
     react(),
     tailwindcss(),
     tsconfigPaths(),
@@ -18,5 +21,3 @@ export default defineConfig({
     port: 5173,
   },
 });
-
-

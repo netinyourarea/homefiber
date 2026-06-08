@@ -15,7 +15,9 @@ export function SupportPopup() {
     setOpen(false);
     try {
       sessionStorage.setItem("hfc_support_popup_dismissed", "1");
-    } catch {}
+    } catch (_e) {
+      // sessionStorage unavailable (e.g. private mode) — silently ignore
+    }
   };
 
   if (!open) return null;
